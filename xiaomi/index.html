@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Warning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="warning-header">
+            <div class="warning-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48px" height="48px">
+                    <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                </svg>
+            </div>
+            <h1>The Xiaomi version is no longer recommend to download.</h1>
+        </div>
+
+        <p>We recommend that you don't continue to download the Xiaomi version. For easier account creation, please consider switching to the Lenovo version instead.</p>
+
+        <a href="https://youtu.be/bfxErjhg9eM" class="button">Download the Lenovo version</a>
+
+        <div class="more-information">
+            <p class="more-info-toggle">More information <span class="arrow">^</span></p>
+            <div class="info-content">
+                <p>The Xiaomi version is becoming stricter with account creation when it comes to Chinese ID verification. It might requires the ID photo/face, or a Chinese phone number during the verification process, making it almost impossible for foreigners to register. We no longer recommend using it.</p>
+                <p>For easier access, switch to the Lenovo version, which works on any Android device and has a simpler registration process.</p>
+                <p><strong>Note: No support will be provided if you ignore this warning and still download the Xiaomi version.</strong></p>
+            </div>
+        </div>
+
+        <a href="https://app.xiaomi.com/details?id=com.popcap.pvz2cthdxm" class="continue-link" id="xiaomiContinueLink">> <u>Continue to download the Xiaomi version at your own risk (not recommend).</u></a>
+
+        <p class="footer-text">Provided by Pea Gameplay</p>
+    </div>
+
+    <script>
+        const toggleButton = document.querySelector('.more-info-toggle');
+        const infoContent = document.querySelector('.info-content');
+        const arrow = document.querySelector('.arrow');
+        const xiaomiLink = document.getElementById('xiaomiContinueLink');
+
+        if (toggleButton && infoContent && arrow && xiaomiLink) {
+            // Initially hide the content and Xiaomi link (Xiaomi link also hidden by CSS)
+            infoContent.style.display = 'none';
+            // xiaomiLink.style.display = 'none'; // Primarily handled by CSS now
+            arrow.style.transform = 'rotate(180deg)';
+
+
+            toggleButton.addEventListener('click', () => {
+                if (infoContent.style.display === 'none' || infoContent.style.display === '') {
+                    infoContent.style.display = 'block';
+                    xiaomiLink.style.display = 'block'; // Show the Xiaomi continue link
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    infoContent.style.display = 'none';
+                    xiaomiLink.style.display = 'none'; // Hide the Xiaomi continue link
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+body {
+    font-family: sans-serif;
+    background-color: #C42A27; /* Main red color */
+    color: #FFFFFF; /* White text */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #C42A27; /* Same as body */
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 90%;
+}
+
+.warning-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.warning-icon svg {
+    fill: #facc15;
+    margin-right: 15px;
+}
+
+.warning-header h1 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin: 0;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.button {
+    display: inline-block;
+    background-color: #f8f8f8;
+    color: #333333;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+.more-information {
+    margin-bottom: 25px;
+}
+
+.more-info-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    color: #facc15;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.more-info-toggle .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    font-size: 1.2em;
+}
+
+.info-content {
+    /* Initially hidden by JavaScript */
+    margin-top: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #a3201e;
+}
+
+.info-content p {
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+.info-content p strong {
+    color: #fde047;
+}
+
+.continue-link {
+    display: block; /* Default display when shown by JS */
+    color: #fcd34d;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#xiaomiContinueLink {
+    display: none; /* Initially hide this link */
+}
+
+.continue-link:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    text-align: right;
+    font-size: 0.8em;
+    color: #f0f0f0;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+    .warning-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .warning-icon svg {
+        margin-bottom: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    .warning-header h1 {
+        font-size: 1.3em;
+    }
+    .button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .footer-text {
+        text-align: center;
+    }
+}
